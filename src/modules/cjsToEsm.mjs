@@ -7,16 +7,19 @@ import http from 'http';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-import('./files/c');
+import a from './files/a.json' assert {type: "json"};
+import b from './files/b.json' assert {type: "json"};
+
+import('./files/c.js');
 
 const random = Math.random();
 
 let unknownObject;
 
 if (random > 0.5) {
-    unknownObject = import('./files/a.json');
+    unknownObject = a;
 } else {
-    unknownObject = import('./files/b.json');
+    unknownObject = b;
 }
 
 console.log(`Release ${release()}`);
@@ -27,7 +30,8 @@ console.log(`Path to current file is ${__filename}`);
 console.log(`Path to current directory is ${__dirname}`);
 
 const createMyServer = http.createServer((_, res) => {
-	res.end('Request accepted');
+    res.end('Request accepted')
 });
+
 
 export { unknownObject, createMyServer };
