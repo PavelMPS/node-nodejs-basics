@@ -11,7 +11,7 @@ export const calculateHash = async () => {
     fs.readFile(path.join(__dirname, 'files', 'fileToCalculateHashFor.txt'), 'utf-8', 
     (err, data) => {
         if (err) throw new Error('FS operation failed');
-        const hash = crypto.createHash('sha256').update(data).digest('base64');
+        const hash = crypto.createHash('sha256').update(data).digest('hex');
         console.log(hash);
     })
 };
