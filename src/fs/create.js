@@ -5,12 +5,18 @@ import { dirname } from 'path';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+const filePath = path.join(__dirname, 'files', 'fresh.txt');
 
 export const create = async () => {
-    fs.writeFile(path.join(__dirname, 'files', 'fresh.txt'), 'I am fresh and young',
+    fs.access(filePath, err => {
+        if (!err) {
+            throw new Error('FS operation failed'); 
+        }
+    });
+    fs.writeFile(filePath, 'I am fresh and young',
     err => {
         if (err) throw new Error('FS operation failed');      
-    })
+    });
 };
 
 create();
