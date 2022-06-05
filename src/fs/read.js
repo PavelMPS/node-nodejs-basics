@@ -5,22 +5,18 @@ import { dirname } from "path";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-const readFilePath = path.join(__dirname, 'files', 'fileToRead.txt');
+const readFilePath = path.join(__dirname, "files", "fileToRead.txt");
 
 export const read = async () => {
-    fs.access(readFilePath, err => {
-        if (err) {
-            throw new Error('FS operation failed'); 
-        }
-    });
-    fs.readFile(
-        readFilePath,
-        'utf-8',
-        (err, data) => {
-            if (err) throw new Error('FS operation failed');
-            console.log(data);
-        }
-    );
+  fs.access(readFilePath, (err) => {
+    if (err) {
+      throw new Error("FS operation failed");
+    }
+  });
+  fs.readFile(readFilePath, "utf-8", (err, data) => {
+    if (err) throw new Error("FS operation failed");
+    console.log(data);
+  });
 };
 
 read();

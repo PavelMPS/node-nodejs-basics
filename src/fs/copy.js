@@ -10,31 +10,31 @@ const pathBaseFolder = path.join(__dirname, "files");
 const pathCopyFolder = path.join(__dirname, "files-copy");
 
 export const copy = async () => {
-  fs.access(pathBaseFolder, err => {
+  fs.access(pathBaseFolder, (err) => {
     if (err) {
-        throw new Error('FS operation failed'); 
+      throw new Error("FS operation failed");
     } else {
-      fs.mkdir(pathCopyFolder, { recursive: true }, err => {
-        if (err) throw new Error('FS operation failed');
+      fs.mkdir(pathCopyFolder, { recursive: true }, (err) => {
+        if (err) throw new Error("FS operation failed");
       });
-    
+
       fs.readdir(pathBaseFolder, (err, files) => {
         if (err) throw err;
         files.forEach((file) => {
           fs.copyFile(
             path.join(pathBaseFolder, file),
             path.join(pathCopyFolder, file),
-            err => {
-                if (err) throw new Error('FS operation failed');
+            (err) => {
+              if (err) throw new Error("FS operation failed");
             }
           );
         });
       });
     }
   });
-  fs.access(pathCopyFolder, err => {
+  fs.access(pathCopyFolder, (err) => {
     if (!err) {
-        throw new Error('FS operation failed'); 
+      throw new Error("FS operation failed");
     }
   });
 };

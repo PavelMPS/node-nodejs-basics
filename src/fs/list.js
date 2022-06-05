@@ -5,18 +5,18 @@ import { dirname } from "path";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-const folderPath = path.join(__dirname, 'files');
+const folderPath = path.join(__dirname, "files");
 
 export const list = async () => {
-    fs.access(folderPath, err => {
-        if (err) {
-            throw new Error('FS operation failed'); 
-        }
-    });
-    fs.readdir(folderPath, (err, files) => {
-        if (err) throw new Error('FS operation failed');
-        console.log(files);
-    }) 
+  fs.access(folderPath, (err) => {
+    if (err) {
+      throw new Error("FS operation failed");
+    }
+  });
+  fs.readdir(folderPath, (err, files) => {
+    if (err) throw new Error("FS operation failed");
+    console.log(files);
+  });
 };
 
 list();
