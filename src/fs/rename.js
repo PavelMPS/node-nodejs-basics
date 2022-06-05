@@ -28,3 +28,6 @@ export const rename = async () => {
 };
 
 rename();
+
+//Вы можете проверить используя команду npm run fs:rename
+//Или используя node rename (находясь в папке fs)

@@ -23,3 +23,6 @@ export const write = async () => {
 };
 
 write();
+
+//Вы можете проверить используя команду npm run streams:write
+//Или используя node write (находясь в папке streams)

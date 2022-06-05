@@ -25,3 +25,6 @@ export const compress = async () => {
 };
 
 compress();
+
+//Вы можете проверить используя команду npm run zip:compress
+//Или используя node compress (находясь в папке zip)

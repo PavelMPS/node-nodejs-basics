@@ -14,3 +14,6 @@ export const spawnChildProcess = async (args) => {
 };
 
 spawnChildProcess(["arg1", "arg2", "arg3"]);
+
+//Вы можете проверить используя команду npm run child-process
+//Или используя node cp (находясь папке cp)

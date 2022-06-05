@@ -19,3 +19,6 @@ export const remove = async () => {
 };
 
 remove();
+
+//Вы можете проверить используя команду npm run fs:delete
+//Или используя node delete (находясь в папке fs)

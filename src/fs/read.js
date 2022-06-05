@@ -20,3 +20,6 @@ export const read = async () => {
 };
 
 read();
+
+//Вы можете проверить используя команду npm run fs:read
+//Или используя node read (находясь в папке fs) 

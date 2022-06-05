@@ -20,3 +20,6 @@ export const list = async () => {
 };
 
 list();
+
+//Вы можете проверить используя команду npm run fs:list
+//Или используя node list (находясь в папке fs)

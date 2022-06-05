@@ -23,3 +23,6 @@ export const decompress = async () => {
 };
 
 decompress();
+
+//Вы можете проверить используя команду npm run zip:decompress
+//Или используя node decompress (находясь в папке zip)

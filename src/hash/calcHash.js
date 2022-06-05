@@ -20,3 +20,6 @@ export const calculateHash = async () => {
 };
 
 calculateHash();
+
+//Вы можете проверить используя команду npm run hash
+//Или используя node calcHash (находясь в папке hash)

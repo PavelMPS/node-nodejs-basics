@@ -34,3 +34,6 @@ const createMyServer = http.createServer((_, res) => {
 });
 
 export { unknownObject, createMyServer };
+
+//Вы можете проверить используя команду npm run modules
+//Или используя node index (находясь в папке modules)

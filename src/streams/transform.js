@@ -11,3 +11,6 @@ export const transform = async () => {
 };
 
 transform();
+
+//Вы можете проверить используя команду npm run streams:transform
+//Или используя node transform (находясь в папке streams)

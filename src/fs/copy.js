@@ -40,3 +40,6 @@ export const copy = async () => {
 };
 
 copy();
+
+//Вы можете проверить используя команду npm run fs:copy
+//Или используя node copy (находясь в папке fs)

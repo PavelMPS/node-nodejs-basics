@@ -19,3 +19,6 @@ export const create = async () => {
 };
 
 create();
+
+//Вы можете проверить используя команду npm run fs:create
+//Или используя node create (находясь в папке fs)

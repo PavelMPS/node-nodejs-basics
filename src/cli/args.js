@@ -14,3 +14,4 @@ parseArgs();
 //Для проверки наберите в консоли:
 //Git Bash:
 //node args --propName value --prop2Name value2
+//Также Вы можете проверить используя команду npm run cli:args

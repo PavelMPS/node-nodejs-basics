@@ -17,3 +17,6 @@ export const read = async () => {
 };
 
 read();
+
+//Вы можете проверить используя команду npm run streams:read
+//Или используя node read (находясь в папке streams)
